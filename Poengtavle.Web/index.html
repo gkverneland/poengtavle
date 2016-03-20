@@ -35,172 +35,167 @@
 					<div id="info"></div>
 					<div id="close">X</div>
 				</div>
-				
-				<div id="settings">
-				
-					<table>
-						<tr>
-							<th>Bakgrunnsfarge</th>
-							<th>Vindu</th>
-							<th>Teller start verdi</th>
-							<th>(hh:mm:ss:ms)</th>
-							<th>[Enter]</th>
-							<th>[Space]</th>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" id="color" value="ff00ff"/>
-							</td>
-							<td>
-								<button id="switchPlace">Bytt plassering</button>
-							</td>
-							<td>
-								<input type="text" id="time" value="00:10:00:00"/>
-							</td>
-							<td>
-								<button id="setCount">Sett start verdi</button>
-							</td>
-							<td>
-								<button id="count">Tell ned</button>
-							</td>
-							<td>
-								<button id="pause">Pause</button>
-							</td>
-						</tr>
 
-					</table>
-				
-				</div>
-				
-				<div id="lag">
-					<table>
-						<tr>
-							<th>Lag</th>
-							<th>Farge</th>
-							<th>Teller tid</th>
-							<th>[F1 - F4]</th>
-							<th>[F9 - F12]</th>
-						</tr>
-						<tr>
-							<td>
-								<input class="team" id="tm1" type="text" value="Hallingdal"/>
-							</td>
-							<td>
-								<input type="text" id="f1" value="00ff00"/>
-							</td>
-							<td>
-								<input type="text" id="t1" count="false" value="00:00:00:00"/>
-							</td>
-							<td>
-								<button id="count1" nr="1">Tell ned</button>
-							</td>
-							<td>
-								<button id="pause1" nr="1">Pause</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input class="team" id="tm2" type="text" value="Oslo"/>
-							</td>
-							<td>
-								<input type="text" id="f2" value="005ac8"/>
-							</td>
-							<td>
-								<input type="text" id="t2" count="false" value="00:00:00:00"/>
-							</td>
-							<td>
-								<button id="count2" nr="2">Tell ned</button>
-							</td>
-							<td>
-								<button id="pause2" nr="2">Pause</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input class="team" id="tm3" type="text" value="Grenland"/>
-							</td>
-							<td>
-								<input type="text" id="f3" value="efff00"/>
-							</td>
-							<td>
-								<input type="text" id="t3" count="false" value="00:00:00:00"/>
-							</td>
-							<td>
-								<button id="count3" nr="3">Tell ned</button>
-							</td>
-							<td>
-								<button id="pause3" nr="3">Pause</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input class="team" id="tm4" type="text" value="København"/>
-							</td>
-							<td>
-								<input type="text" id="f4" value="f54646"/>
-							</td>
-							<td>
-								<input type="text" id="t4" count="false" value="00:00:00:00"/>
-							</td>
-							<td>
-								<button id="count4" nr="4">Tell ned</button>
-							</td>
-							<td>
-								<button id="pause4" nr="4">Pause</button>
-							</td>
-						</tr>
-					</table>
-				</div>
-				
-				<div id="options">
-				
-					<table>
-						<tr>
-							<th>[+]</th>
-							<th>[-]</th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<td>
-								<button id="zoomIn">Zoom inn</button>
-							</td>
-							<td>
-								<button id="zoomOut">Zoom ut</button>
-							</td>
-							<td>
-								<button id="save">Lagre instillinger</button>
-							</td>
-							<td>
-								<button id="load">Last instillinger</button>
-							</td>
-						</tr>
+			    <div id="settings">
 
-					</table>
-				
-				</div>
-				
+			        <table>
+			            <tr>
+			                <th>Vindu</th>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <button id="switchPlace">Bytt plassering</button>
+			                </td>
+
+			            </tr>
+
+			        </table>
+
+			    </div>
+
+			    <div id="volley" class="section">
+			        <table>
+			            <thead>
+			            <tr>
+			                <th></th>
+			                <th></th>
+			                <th>H</th>
+			                <th>B</th>
+			                <th></th>
+			                <th>Aktiv</th>
+			            </tr>
+			            </thead>
+			            <tbody>
+			            <tr>
+			                <th>Sett 1</th>
+			                <td>
+			                    <input type="button" value="+" class="plusminus" onclick="increment('sett1HInput')" />
+			                    <input type="button" value="-" class="plusminus" onclick="decrement('sett1HInput')" />
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett1HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett1BInput"/>
+			                </td>
+			                <td>
+			                    <input type="button" value="+" class="plusminus" onclick="increment('sett1BInput');"/>
+			                    <input type="button" value="-" class="plusminus" onclick="decrement('sett1BInput');"/>
+			                </td>
+			                <td>
+			                    <input type="radio" value="1" name="aktivtSett" checked="checked"/>
+			                </td>
+			            </tr>
+			            <tr>
+			                <th>Sett 2</th>
+                            <td>
+                                <input type="button" value="+" class="plusminus" onclick="increment('sett2HInput');" />
+                                <input type="button" value="-" class="plusminus" onclick="decrement('sett2HInput');" />
+                            </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett2HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett2BInput"/>
+			                </td>
+                            <td>
+                                <input type="button" value="+" class="plusminus" onclick="increment('sett2BInput');" />
+                                <input type="button" value="-" class="plusminus" onclick="decrement('sett2BInput');" />
+                            </td>
+			                <td>
+			                    <input type="radio" value="2" name="aktivtSett"/>
+			                </td>
+			            </tr>
+			            <tr>
+			                <th>Sett 3</th>
+                            <td>
+                                <input type="button" value="+" class="plusminus" onclick="increment('sett3HInput');" />
+                                <input type="button" value="-" class="plusminus" onclick="decrement('sett3HInput');" />
+                            </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett3HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett3BInput"/>
+			                </td>
+                            <td>
+                                <input type="button" value="+" class="plusminus" onclick="increment('sett3BInput');" />
+                                <input type="button" value="-" class="plusminus" onclick="decrement('sett3BInput');" />
+                            </td>
+			                <td>
+			                    <input type="radio" value="3" name="aktivtSett"/>
+			                </td>
+			            </tr>
+			            </tbody>
+
+			        </table>
+
+                    <input type="button" value="Sync (F2)" id="syncButton"/>
+			    </div>
+
+
 			</div>
-			
-			<div id="display">
-				<div id="ror_bak"></div>
-					<div id="flc1"><div id="fl1"></div></div>
-					<div id="flc2"><div id="fl2"></div></div>
-					<div id="flc3"><div id="fl3"></div></div>
-					<div id="flc4"><div id="fl4"></div></div>
-				<div id="ror_over"></div>
-				
-				<div class="teamNames" id="tm1n"></div>
-				<div class="teamNames" id="tm2n"></div>
-				<div class="teamNames" id="tm3n"></div>
-				<div class="teamNames" id="tm4n"></div>
-				
-				<div class="teamClocks" id="t1d">00:00:00</div>
-				<div class="teamClocks" id="t2d">00:00:00</div>
-				<div class="teamClocks" id="t3d">00:00:00</div>
-				<div class="teamClocks" id="t4d">00:00:00</div>
-			</div>
-	
+
+		<div id="display">
+            <div id="displayInner">
+                <div id="poengHolder">
+                    <div id="Hlogo">
+                        Oslo<br />Tigers
+                    </div>
+                    <div id="poeng">
+                        <div id="Hpoeng">
+                            0
+                        </div>
+                        <div id="poengkolon">
+                            :
+                        </div>
+                        <div id="Bpoeng">
+                            0
+                        </div>
+                    </div>
+
+                    <div id="Blogo">
+                        Siddis<br />Fighters
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div id="sett">
+                    <div id="sett1" class="sett">
+                        <div id="sett1Header" class="settHeader">
+                            Sett 1
+                        </div>
+                        <div id="sett1Inner" class="settInner">
+                            <div id="sett1H" class="settH">0</div>
+                            <div id="sett1K" class="settK">:</div>
+                            <div id="sett1B" class="settB">0</div>
+                        </div>
+                    </div>
+                    <div id="sett2" class="sett" style="display: none;">
+                        <div id="sett2Header" class="settHeader">
+                            Sett 2
+                        </div>
+                        <div id="sett2Inner" class="settInner">
+                            <div id="sett2H" class="settH">0</div>
+                            <div id="sett2K" class="settK">:</div>
+                            <div id="sett2B" class="settB">0</div>
+                        </div>
+
+                    </div>
+                    <div id="sett3" class="sett" style="display: none;">
+                        <div id="sett3Header" class="settHeader">
+                            Sett 3
+                        </div>
+                        <div id="sett3Inner" class="settInner">
+                            <div id="sett3H" class="settH">0</div>
+                            <div id="sett3K" class="settK">:</div>
+                            <div id="sett3B" class="settB">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+		
+
 		</body>
 </html>
