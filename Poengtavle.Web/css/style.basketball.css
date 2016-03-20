@@ -1,0 +1,23 @@
+.section table {
+    min-width: 400px;
+}
+.section table td {
+    padding-bottom: 13px;
+}
+
+#periodeDisplay, #tidDisplay {
+    text-align: center;
+}
+.details {
+    width: 33.33%;
+    position: relative;
+    float: left;
+    font-size: 40px;
+    margin-top: 70px;
+}
+.detailsHeader {
+    text-align: center;
+}
+#timerStatus {
+    color: white;
+}

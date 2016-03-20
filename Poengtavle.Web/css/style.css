@@ -10,9 +10,6 @@ body {
 	padding: 0px;
 }
 
-input[type=button], button {
-	cursor: pointer;
-}
 #syncButton {
     margin-top: 30px;
 }
@@ -25,6 +22,7 @@ input[type=button], button {
 	width: 50%;
 	height: 100%;
 	background: silver;
+    font-size: 15px;
 }
 
 #taskbar {
@@ -56,7 +54,6 @@ input[type=button], button {
 	text-align: center;
 	font-family: arial;
 	background: red;
-	cursor: pointer;
 	-webkit-app-region: no-drag;
 }
 
@@ -68,7 +65,6 @@ input[type=button], button {
 	height: 20px;
 	background: url('../images/open.png');
 	background-repeat: no-repeat;
-	cursor: pointer;
 	-webkit-app-region: no-drag;
 }
 
@@ -112,12 +108,6 @@ input[type=number] {
     text-align: center;
     width: 40px;
 }
-#volley table {
-    min-width: 400px;
-}
-#volley table td {
-    padding-bottom: 13px;
-}
 
 /* DISPLAY */
 #display {
@@ -128,7 +118,14 @@ input[type=number] {
 	height: 100%;
 	background: black;
 	cursor: none;
-	background-color: rgb(44, 255, 0);
+    background:url('../images/PÅSKECAMP_2016_BG_01_68o.jpg');
+}
+
+#displayHeader {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
 }
 
 #poengHolder {
@@ -162,39 +159,4 @@ input[type=number] {
 }
 #Hpoeng {
     text-align: right;
-}
-
-#sett {
-    font-size: 30px;
-    margin-top: 8%;
-}
-#sett div {
-    position: relative;
-    float: left;
-}
-.sett {
-    width: 33.33%;
-}
-.settHeader {
-    clear: both;
-    width: 100%;
-    text-align: center;
-}
-.settInner {
-    clear: both;
-    width: 100%;
-    
-}
-.settH, .settB {
-    width: 45%;
-}
-.settH {
-    text-align: right;
-}
-.settB {
-    text-align: left;
-}
-.settK {
-    width: 10%;
-    text-align: center;
 }
