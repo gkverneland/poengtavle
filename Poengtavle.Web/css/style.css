@@ -1,0 +1,281 @@
+body {
+	font-family: arial;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(255, 0, 255);
+}
+
+button {
+	cursor: pointer;
+}
+
+/* CONTROLLER */
+#controller {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	background: silver;
+}
+
+#taskbar {
+	position: relative;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+	background: #333333;
+	-webkit-app-region: drag;
+}
+
+#dragLocker {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-app-region: no-drag;
+	z-index: -1;
+}
+
+#close {
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 20px;
+	color: black;
+	text-align: center;
+	font-family: arial;
+	background: red;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+}
+
+#key {
+	position: relative;
+	margin: 5px;
+	float: left;
+	width: 23px;
+	height: 20px;
+	background: url('../images/open.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+}
+
+#info {
+	position: relative;
+	margin: 2px;
+	padding: 3px;
+	float: left;
+	width: auto;
+	height: 20px;
+	background: black;
+	color: white;
+	-webkit-app-select: none;
+}
+
+#close:hover {
+	background: orange;
+}
+
+#settings, #lag, #options, .section {
+	position: relative;
+	margin: 5px;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+#settings th, #lag th, #options th, .section th{
+	font-size: 15px;
+	text-align: left;
+	color: white;
+}
+
+input, button, td{
+	width: 120px;
+}
+
+/* DISPLAY */
+#display {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 49.3%;
+	height: 100%;
+	background: black;
+	cursor: none;
+	background-color: rgb(44, 255, 0);
+}
+
+#ror_bak {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background: url('../images/ror_bak2.png');
+	background-size: 100% 100%;
+	z-index: 0;
+}
+
+#flc1 {
+	position: absolute;
+	bottom: 6%;
+	left: 7.0%;
+	width: 2.2%;
+	height: 76%;
+	z-index: 1;
+}
+
+#flc2 {
+	position: absolute;
+	bottom: 6%;
+	left: 12.9%;
+	width: 2.2%;
+	height: 76%;
+	z-index: 1;
+}
+
+#flc3 {
+	position: absolute;
+	bottom: 6%;
+	left: 18.3%;
+	width: 2.2%;
+	height: 76%;
+	z-index: 1;
+}
+
+#flc4 {
+	position: absolute;
+	bottom: 6%;
+	left: 23.9%;
+	width: 2.2%;
+	height: 76%;
+	z-index: 1;
+}
+
+#fl1 {
+	position: absolute;
+	bottom: 0%;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px -2px 15px black inset;
+}
+
+#fl2 {
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px -2px 15px black inset;
+}
+
+#fl3 {
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px -2px 15px black inset;
+}
+
+#fl4 {
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px -2px 15px black inset;
+}
+
+#ror_over {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background: url('../images/ror_over2.png');
+	background-size: 100% 100%;
+	z-index: 10;
+}
+
+#tm1n {
+	/*left: 0.2%;*/
+	left: -9.0%;
+}
+
+#tm2n {
+	/*left: 6%;*/
+	left: -3.6%;
+}
+
+#tm3n {
+	/*left: 11.6%;*/
+	left: 1.9%;
+}
+
+#tm4n {
+	/*left: 17.1%;*/
+	left: 7.4%;
+}
+
+.teamNames {
+	position: absolute;
+	width: 30%;
+	height: 5%;
+	color: white;
+	padding-bottom: 0px;
+	font-weight: bold;
+	font-size: 230%;
+	-webkit-transform: rotate(-90deg);
+	z-index: 11;
+	bottom: 52%;
+	text-transform:uppercase;
+	/*color:black;*/
+	text-shadow: 2px 2px 5px #000000;
+	/*bottom: 90%;*/	
+}
+
+#t1d {
+	bottom: 15%;
+	left: 2.2%;
+}
+
+#t2d {
+	bottom: 15%;
+	left: 7.7%;
+}
+
+#t3d {
+	bottom: 15%;
+	left: 13.2%;
+}
+
+#t4d {
+	bottom: 15%;
+	left: 18.8%;
+}
+
+.teamClocks {
+	position: absolute;
+	width: 9%;
+	height: 7%;
+	color: white;
+	font-size: 230%;
+	padding-bottom: 0px;
+	font-weight: bold;
+	-webkit-transform: rotate(-90deg);
+	z-index: 11;
+	/*color:black;*/
+	text-shadow: 2px 2px 5px #000000;
+}
