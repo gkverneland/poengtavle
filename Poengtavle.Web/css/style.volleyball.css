@@ -6,7 +6,7 @@
 }
 
 #sett {
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 8%;
 }
 #sett div {
@@ -24,7 +24,7 @@
 .settInner {
     clear: both;
     width: 100%;
-    
+    font-weight: 700;
 }
 .settH, .settB {
     width: 45%;
