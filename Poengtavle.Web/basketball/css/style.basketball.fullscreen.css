@@ -1,0 +1,43 @@
+.section table {
+    min-width: 400px;
+}
+.section table td {
+    padding-bottom: 13px;
+}
+
+#periodeDisplay, #tidDisplay {
+    text-align: center;
+}
+.details {
+    width: 33.33%;
+    position: relative;
+    float: left;
+    font-size: 40px;
+    margin-top: 70px;
+}
+.detailsHeader {
+    text-align: center;
+}
+#timerStatus {
+    color: white;
+}
+.settInner {
+    font-weight: 700;
+}
+#poeng {
+    width: 33.33%;
+    font-size: 100px;
+}
+#Hpoeng, #Bpoeng {
+    width: 45%;
+}
+#poengkolon {
+    width: 10%;
+    text-align: center;
+}
+#BPoeng {
+    text-align: left;
+}
+#Hpoeng {
+    text-align: right;
+}

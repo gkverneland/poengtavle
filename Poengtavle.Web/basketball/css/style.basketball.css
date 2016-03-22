@@ -1,0 +1,66 @@
+.section table {
+    min-width: 400px;
+}
+.section table td {
+    padding-bottom: 13px;
+}
+
+#periodeDisplay, #tidDisplay {
+    text-align: center;
+}
+.details {
+    width: 33.33%;
+    position: relative;
+    float: left;
+    font-size: 40px;
+    margin-top: 70px;
+}
+.detailsHeader {
+    text-align: center;
+}
+#timerStatus {
+    color: white;
+}
+.settInner {
+    font-weight: 700;
+}
+#poeng {
+    width: 33.33%;
+    font-size: 40px;
+}
+#poengkolon {
+    width: 10%;
+    text-align: center;
+}
+#BPoeng {
+    text-align: left;
+    margin-right: 6px;
+}
+#Hpoeng {
+    text-align: right;
+    margin-left: 6px;
+}
+#Hpoeng, #Bpoeng {
+    min-width: 60px;
+}
+
+#poengHolder {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 2px 6px 6px 6px;
+    height: 80px;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+    width: 312px;
+
+}
+#poengHolder, #poengHolder div {
+    position: relative;
+    float: left;
+}
+#tidDisplay, #periodeDisplay {
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "PÅSKECAMP POENGTAVLE 2016, Volleyball",
+  "version": "0.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "description": "Poengtavle volleyball",
+  "app": {
+    "background": {
+      "scripts": [ "loader.js" ]
+    }
+  },
+  "offline_enabled": true,
+  "permissions": [
+    "geolocation",
+    "storage",
+    "notifications",
+    "app.window",
+    "<all_urls>"
+  ]
+}

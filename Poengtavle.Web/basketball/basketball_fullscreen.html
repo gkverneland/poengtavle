@@ -1,0 +1,177 @@
+<html>
+		<head>
+		    <title>Basketball</title>
+			<!--CSS-->
+			<link href="css/jquery-ui-1.10.2.css" rel="stylesheet">
+			<link href="css/jquery.colorpicker.css" rel="stylesheet" type="text/css"/>
+		    <link href="css/jquery.ui.timepicker.css" rel="stylesheet" type="text/css"/>
+		    <link href="css/style.basketball.css" rel="stylesheet">
+            <link href="css/style.basketball.fullscreen.css" rel="stylesheet">
+			
+			<!--JQUERY-->
+			<script src="js/jslib/jquery-1.9.1.min.js" type="text/javascript"></script>
+			<script src="js/jslib/jquery-ui-1.10.2.min.js" type="text/javascript"></script>
+			<script src="js/jslib/jquery.tipTip.minified.js" type="text/javascript"></script>
+			
+			<!--COLORPICKER-->
+			<script src="js/jslib/cp/jquery.colorpicker.js"></script>
+			<script src="js/jslib/cp/i18n/jquery.ui.colorpicker-nl.js"></script>
+			<script src="js/jslib/cp/swatches/jquery.ui.colorpicker-pantone.js"></script>
+			
+			<!--TIMEPICKER-->
+			<script src="js/jslib/jquery.ui.timepicker.js"></script>
+			
+			<!--CONTROLLER-->
+			<script src="js/controller.basketball.js" type="text/javascript"></script>
+			
+		</head>
+		<body>
+		
+			<div id="controller">
+
+			    <div id="taskbar">
+			        <div id="dragLocker"></div>
+			        <div locked="false" id="key"></div>
+			        <div id="info"></div>
+			        <div id="close">X</div>
+			    </div>
+
+			    <div class="section">
+			        Basketball
+			        <span style="float: right; position: relative">
+                        <input type="button" onclick="window.location.href='index.html'" value="Gå til Volleyball" />
+                    </span>
+			    </div>
+                
+			    <div id="settings">
+
+			        <table>
+			            <tr>
+			                <th>Vindu</th>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <button id="switchPlace">Bytt plassering</button>
+			                </td>
+
+			            </tr>
+
+			        </table>
+
+			    </div>
+
+			    <div class="section">
+			        <table>
+                        <tr>
+                            <th>Tid</th>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="time" value="05:00" id="tidInput" />
+                            </td>
+                            <td>
+                                <input type="button" value="Start" onclick="startTimer();" id="startTimerButton"/>
+                                <input type="button" value="Stopp" onclick="stopTimer();" id="stopTimerButton"/>
+                            </td>
+                        </tr>
+			            <tr>
+			                <th>Periode</th>
+			                <td></td>
+			                <td></td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="1" id="periodeInput"/>
+			                </td>
+			                <td>
+			                    <input type="button" value="+" class="plusminus" onclick="increment('periodeInput', 1);"/>
+			                    <input type="button" value="-" class="plusminus" onclick="decrement('periodeInput');"/>
+			                </td>
+			            </tr>
+			        </table>
+			    </div>
+
+			    <div class="section">
+			        <table>
+			            <thead>
+			            <tr>
+			                <th></th>
+			                <th></th>
+			                <th>H</th>
+			                <th>B</th>
+			                <th></th>
+			            </tr>
+			            </thead>
+			            <tbody>
+			            <tr>
+			                <th>Poeng</th>
+			                <td>
+                                <input type="button" value="3+" class="plusminus" onclick="increment('poengInputH', 3)" />
+			                    <input type="button" value="2+" class="plusminus" onclick="increment('poengInputH', 2)"/>
+			                    <input type="button" value="1+" class="plusminus" onclick="increment('poengInputH', 1)"/>
+			                    <input type="button" value="-" class="plusminus" onclick="decrement('poengInputH')"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="poengInputH"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="poengInputB"/>
+			                </td>
+			                <td>
+			                    <input type="button" value="3+" class="plusminus" onclick="increment('poengInputB', 3);"/>
+                                <input type="button" value="2+" class="plusminus" onclick="increment('poengInputB', 2);" />
+			                    <input type="button" value="1+" class="plusminus" onclick="increment('poengInputB', 1);"/>
+			                    <input type="button" value="-" class="plusminus" onclick="decrement('poengInputB');"/>
+			                </td>
+			            </tr>
+			            
+			            </tbody>
+
+			        </table>
+
+                    <input type="button" value="Sync (F2)" id="syncButton"/>
+			    </div>
+
+
+			</div>
+
+		<div id="display">
+		    <div id="displayInner">
+                <div id="displayHeader">
+                    Påskecamp 2016 – Finale i basketball
+                </div>
+		        <div id="poengHolder">
+		            <div id="Hlogo">
+		                Oslo<br/>Tigers
+		            </div>
+		            <div id="poeng">
+		                <div id="Hpoeng"></div>
+		                <div id="poengkolon">:</div>
+		                <div id="Bpoeng"></div>
+		            </div>
+
+		            <div id="Blogo">
+		                Siddis<br/>Fighters
+		            </div>
+		        </div>
+		        <div style="clear: both;"></div>
+		        <div class="details">
+		            <div class="detailsHeader">
+		                Periode
+		            </div>
+		            <div id="periodeDisplay" class="settInner"></div>
+		        </div>
+		        <div class="details">
+		            
+		        </div>
+		        <div class="details">
+		            <div class="detailsHeader">
+		                Tid
+		            </div>
+		            <div id="tidDisplay" class="settInner"></div>
+		        </div>
+		    </div>
+		</div>
+
+		
+
+		</body>
+</html>

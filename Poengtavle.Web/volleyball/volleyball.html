@@ -1,0 +1,162 @@
+<html>
+		<head>
+		    <title>Volleyball</title>
+			<!--CSS-->
+			<link href="css/style.css" rel="stylesheet">
+			<link href="css/jquery-ui-1.10.2.css" rel="stylesheet">
+			<link href="css/jquery.colorpicker.css" rel="stylesheet" type="text/css"/>
+			<link href="css/jquery.ui.timepicker.css" rel="stylesheet" type="text/css"/>
+		    <link href="css/style.volleyball.css" rel="stylesheet">
+
+			<!--JQUERY-->
+			<script src="js/jslib/jquery-1.9.1.min.js" type="text/javascript"></script>
+			<script src="js/jslib/jquery-ui-1.10.2.min.js" type="text/javascript"></script>
+			<script src="js/jslib/jquery.tipTip.minified.js" type="text/javascript"></script>
+			
+			<!--COLORPICKER-->
+			<script src="js/jslib/cp/jquery.colorpicker.js"></script>
+			<script src="js/jslib/cp/i18n/jquery.ui.colorpicker-nl.js"></script>
+			<script src="js/jslib/cp/swatches/jquery.ui.colorpicker-pantone.js"></script>
+			
+			<!--TIMEPICKER-->
+			<script src="js/jslib/jquery.ui.timepicker.js"></script>
+			
+			<!--CONTROLLER-->
+			<script src="js/controller.volleyball.js" type="text/javascript"></script>
+			
+		</head>
+		<body>
+		
+			<div id="controller">
+				
+				<div id="taskbar">
+					<div id="dragLocker"></div>
+					<div locked="false" id="key"></div>
+					<div id="info"></div>
+					<div id="close">X</div>
+				</div>
+
+			    <div class="section">
+			        Volleyball
+			    </div>
+
+			    <div id="settings">
+
+			        <table>
+			            <tr>
+			                <th>Vindu</th>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <button id="switchPlace">Bytt plassering</button>
+			                </td>
+
+			            </tr>
+
+			        </table>
+
+			    </div>
+
+			    <div id="volley" class="section">
+			        <table>
+			            <thead>
+			            <tr>
+			                <th></th>
+			                <th></th>
+			                <th>H</th>
+			                <th>B</th>
+			                <th></th>
+			                <th>Aktiv</th>
+			            </tr>
+			            </thead>
+			            <tbody>
+			            <tr>
+			                <th>Sett 1</th>
+			                <td>
+			                    <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett1HInput" />
+			                    <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett1HInput" />
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett1HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett1BInput"/>
+			                </td>
+			                <td>
+			                    <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett1BInput" />
+			                    <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett1BInput" />
+			                </td>
+			                <td>
+			                    <input type="radio" value="1" name="aktivtSett" checked="checked"/>
+			                </td>
+			            </tr>
+			            <tr>
+			                <th>Sett 2</th>
+                            <td>
+                                <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett2HInput" />
+                                <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett2HInput" />
+                            </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett2HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett2BInput"/>
+			                </td>
+                            <td>
+                                <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett2BInput" />
+                                <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett2BInput" />
+                            </td>
+			                <td>
+			                    <input type="radio" value="2" name="aktivtSett"/>
+			                </td>
+			            </tr>
+			            <tr>
+			                <th>Sett 3</th>
+                            <td>
+                                <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett3HInput" />
+                                <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett3HInput"  />
+                            </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett3HInput"/>
+			                </td>
+			                <td>
+			                    <input type="number" min="0" max="99" value="0" id="sett3BInput"/>
+			                </td>
+                            <td>
+                                <input type="button" value="+" class="plusminus" data-function="increment" data-input="sett3BInput" />
+                                <input type="button" value="-" class="plusminus" data-function="decrement" data-input="sett3BInput" />
+                            </td>
+			                <td>
+			                    <input type="radio" value="3" name="aktivtSett"/>
+			                </td>
+			            </tr>
+			            </tbody>
+
+			        </table>
+
+                    <input type="button" value="Sync (F2)" id="syncButton"/>
+			    </div>
+
+
+			</div>
+
+		<div id="display">
+		    <div id="displayInner">
+		        <div id="poengHolder">
+		            <div id="Hlogo">ØST</div>
+		            <div id="sett1H" class="settH sett1">0</div>
+		            <div id="sett2H" class="settH sett2">0</div>
+                    <div id="sett3H" class="settH sett3">0</div>
+                    <div style="clear: both;"></div>
+		            <div id="Blogo">FIN</div>
+                    <div id="sett1B" class="settB sett1">0</div>
+                    <div id="sett2B" class="settB sett2">0</div>
+                    <div id="sett3B" class="settB sett3">0</div>
+		        </div>
+		    </div>
+		</div>
+
+		
+
+		</body>
+</html>
