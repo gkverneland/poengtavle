@@ -155,6 +155,8 @@
     <Content Include="basketball\js\jslib\cp\jqcolorpicker.jquery.json" />
     <Content Include="volleyball\js\jslib\cp\.gitignore" />
     <Content Include="volleyball\js\jslib\cp\jqcolorpicker.jquery.json" />
+    <Content Include="basketball\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="volleyball\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
