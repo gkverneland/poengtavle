@@ -3,3 +3,5 @@ packages/*
 Published/*
 *.crx
 *.pem
+.vs/*
+*.user
