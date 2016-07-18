@@ -1,6 +1,3 @@
-var startValue; //Start time
-var zoomValue; //Fluid scale
-
 window.onload = function() {
 
     startup();
