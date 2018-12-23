@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -171,6 +172,9 @@
     <Content Include="fotball\js\jslib\jquery.tipTip.minified.js" />
     <Content Include="fotball\js\jslib\jquery.ui.timepicker.js" />
     <Content Include="fotball\loader.js" />
+    <Content Include="hentelek\css\style.css" />
+    <Content Include="hentelek\hentelek.html" />
+    <Content Include="hentelek\js\controller.hentelek.js" />
     <Content Include="index.html" />
     <Content Include="volleyball\css\jquery-ui-1.10.2.css" />
     <Content Include="volleyball\css\jquery.colorpicker.css" />
@@ -213,6 +217,8 @@
     <Content Include="fotball\js\jslib\cp\jqcolorpicker.jquery.json" />
     <Content Include="fotball\manifest.json" />
     <Content Include="fotball\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="hentelek\manifest.json" />
+    <Content Include="hentelek\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
