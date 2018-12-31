@@ -123,9 +123,9 @@ input[type=number] {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	width: 49.3%;
+	width: 50%;
 	height: 100%;
-	background:url('../images/FK16.jpg');
+	background-color:#00ff00;
     text-align: center;
 }
 
@@ -139,17 +139,24 @@ input[type=number] {
 }
 
 #poengHolder {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     padding: 2px 6px 6px 6px;
-    height: 80px;
-    margin-top: 80%;
-    margin-left: 5%;
+    margin-top: 830px;
     text-align: center;
     color: #fff;
-}
-#poengHolder, #poengHolder div {
     position: relative;
     float: left;
-    min-width: 150px;
+    width: 1152px;
+    margin-left: 384px;
+    margin-right: 384px;
+	-webkit-text-stroke: 1px black; 
 }
+
+#poengHolder div{
+    position: relative;
+    float: left;
+    width: 288px;
+
+}
+
